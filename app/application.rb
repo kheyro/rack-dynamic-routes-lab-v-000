@@ -10,7 +10,7 @@ class Application
       item = req.path.split('/items/').last
       item_exist = @@items.find{ |i| i.name == item }
 
-      if !item_exist.empty?
+      if !item_exist.nil?
         resp.write item_exist.price
         resp.status = 200
       else
