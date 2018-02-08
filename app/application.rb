@@ -8,7 +8,10 @@ class Application
     if req.path.match(/items/)
 
       item = req.path.split('/items/')
-      if Item.items.include?(item)
+      item_exist = @items.find{ |i| i.name == item }
+
+      if !item_exist.empty?
+        resp.write item_exist.price
         resp.status = 200
       else
         resp.write "Item not found"
