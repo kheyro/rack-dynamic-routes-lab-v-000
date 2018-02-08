@@ -5,8 +5,10 @@ class application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    resp.finish
     
+
+    resp.finish
+
   end
 
 end
