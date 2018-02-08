@@ -1,4 +1,4 @@
-class application
+class Application
 
   def call(env)
 
@@ -10,7 +10,6 @@ class application
       resp.write "Route not found"
       resp.status = 404
     end
-
 
     resp.finish
 
