@@ -7,7 +7,7 @@ class Application
 
     if req.path.match(/items/)
 
-      item = req.path.split('/items/')
+      item = req.path.split('/items/').last
       item_exist = @@items.find{ |i| i.name == item }
 
       if !item_exist.empty?
